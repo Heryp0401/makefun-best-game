@@ -1,0 +1,55 @@
+/* Emberlight — page chrome around the canvas. The game itself draws everything
+   on the canvas; this file only frames it, dark sea-night page, no external fonts. */
+:root {
+  --ink: #e8e4d8;
+  --dim: #9a94a8;
+  --gold: #ffb347;
+  --deep: #070812;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--deep);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 0%, #131a33 0%, var(--deep) 70%);
+}
+
+#stage {
+  width: min(1280px, 100vw);
+  padding: 10px 10px 6px;
+}
+
+#game {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow:
+    0 0 0 1px #2a2f4a,
+    0 0 60px rgba(255, 179, 71, 0.12),
+    0 24px 60px rgba(0, 0, 0, 0.6);
+  cursor: crosshair;
+  background: #05060f;
+}
+
+#hint {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  user-select: none;
+}
